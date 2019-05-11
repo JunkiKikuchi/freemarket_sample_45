@@ -4,20 +4,20 @@
       %img.logo{alt: "", src: "https://i.pinimg.com/originals/a5/96/81/a59681532dc173741b66002df92ee9d6.png"}
   / /header
   .main
-    .main-box
-      .main-box_header
+    .main__box
+      .main__box--header
         %h2
           新規会員登録
-      .main-box
-        %ul.regist
-          %li.mail メールアドレスで登録
-          %li.facebook facebookで登録
-          %li.google googleで登録
+      .main__box
+        %ul.main__box--regist
+          %li.main__box--regist__mail メールアドレスで登録
+          %li.main__box--regist__facebook facebookで登録
+          %li.main__box--regist__google googleで登録
   %footer
     %ul.terms
-      %li.pribacy
+      %li.terms__pribacy
         %a{:href => "#"} プライバシーポリシー
-      %li.rule
+      %li.terms__rule
         %a{:href => "#"} メルカリ利用規約
-      %li.specified
+      %li.terms__specified
         %a{:href => ""} 特定商取引に関する表記

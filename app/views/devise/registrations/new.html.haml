@@ -1,21 +1,23 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.wrapper
+  %header
+    %a{:href => "#"}
+      %img.logo{alt: "", src: "https://i.pinimg.com/originals/a5/96/81/a59681532dc173741b66002df92ee9d6.png"}
+  / /header
+  .main
+    .main-box
+      .main-box_header
+        %h2
+          新規会員登録
+      .main-box
+        %ul.regist
+          %li.mail メールアドレスで登録
+          %li.facebook facebookで登録
+          %li.google googleで登録
+  %footer
+    %ul.terms
+      %li.pribacy
+        %a{:href => "#"} プライバシーポリシー
+      %li.rule
+        %a{:href => "#"} メルカリ利用規約
+      %li.specified
+        %a{:href => ""} 特定商取引に関する表記

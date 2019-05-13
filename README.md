@@ -44,11 +44,11 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|user_id|ユーザID|reference|false|||
+|user_id|ユーザID|reference|false|foreign_key: true||
 |name|銀行名|string|false|||
 |account_type|口座種別|string|false|||
 |branch_code|支店コード|string|false|||
-|account_number|口座番号|string|false|||
+|account_number|口座番号|string|false|unique: true||
 |last_name_phonetic|口座名義(セイ)|string|false|||
 |first_name_phonetic|口座名義(メイ)|string|false|||
 |created_at|登録日時|datetime|false|||
@@ -61,8 +61,8 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|user_id|ユーザID|reference|false|||
-|point|ポイント|integer|false|||
+|user_id|ユーザID|reference|false|foreign_key: true||
+|point|ポイント|integer|false|default:0||
 |details|詳細|text|false|||
 |expiration_date|有効期限|string|false|||
 |created_at|登録日時|datetime|false|||
@@ -87,9 +87,9 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|user_id|(評価された)ユーザID|reference|false|||
-|evaluator_id|(評価した)ユーザID|reference|false|||
-|evaluation_id|評価ID|reference|false|||
+|user_id|(評価された)ユーザID|reference|false|foreign_key: true||
+|evaluator_id|(評価した)ユーザID|reference|false|foreign_key: true||
+|evaluation_id|評価ID|reference|false|foreign_key: true||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### Association
@@ -101,9 +101,9 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|seller_id|ユーザID(出品者)|reference|false|||
-|buyer_id|ユーザID(購入者)|reference|true|||
-|category_id|カテゴリID|reference|false|||
+|seller_id|ユーザID(出品者)|reference|false|foreign_key: true||
+|buyer_id|ユーザID(購入者)|reference|true|foreign_key: true||
+|category_id|カテゴリID|reference|false|foreign_key: true||
 |purchase_date|購入日|string|true|||
 |name|商品名|string|false|||
 |explanation|商品説明|string|false|||
@@ -128,7 +128,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|product_id|商品ID|reference|false|||
+|product_id|商品ID|reference|false|foreign_key: true||
 |image_url|商品画像|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -140,8 +140,8 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|product_id|商品ID|reference|false|||
-|comment_user_id|(コメントした)ユーザID|reference|false|||
+|product_id|商品ID|reference|false|foreign_key: true||
+|comment_user_id|(コメントした)ユーザID|reference|false|foreign_key: true||
 |comment|コメント|text|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -178,7 +178,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|category_id|カテゴリID|reference|false|||
+|category_id|カテゴリID|reference|false|foreign_key: true||
 |size|サイズ|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -190,7 +190,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|category_id|カテゴリID|reference|false|||
+|category_id|カテゴリID|reference|false|foreign_key: true||
 |brand_id|ブランドID|reference|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -203,7 +203,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|category_id|カテゴリID|reference|false|||
+|category_id|カテゴリID|reference|false|foreign_key: true||
 |size_id|サイズID|reference|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -216,8 +216,8 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|product_id|商品ID|reference|false|||
-|like_user_id|(いいねした)ユーザID|reference|false|||
+|product_id|商品ID|reference|false|foreign_key: true||
+|like_user_id|(いいねした)ユーザID|reference|false|foreign_key: true||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### Association
@@ -229,7 +229,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|user_id|ユーザID|reference|false|||
+|user_id|ユーザID|reference|false|foreign_key: true||
 |todo|やること|text|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
@@ -241,8 +241,8 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
+|user_id|ユーザID|reference|true|foreign_key: true||
 |page_url|ページURL|string|false|||
-|user_id|ユーザID|reference|true|||
 |message_type|メッセージタイプ|string|false||1:all, 2:individual|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||

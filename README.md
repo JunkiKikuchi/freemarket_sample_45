@@ -15,11 +15,11 @@
 |profile|プロフィール|text|true|||
 |birth|生年月日|string|false|||
 |tel|電話番号|string|false|||
-|delivery_post_code|届け先郵便番号|string|true|||
-|delivery_prefectures|届け先都道府県|string|true|||
-|delivery_city|届け先市町村|string|true|||
-|delivery_address_number|届け先番地|string|true|||
-|delivery_building_name|届け先ビル名|string|false|||
+|delivery_post_code|届け先郵便番号|string|false|||
+|delivery_prefectures|届け先都道府県|string|false|||
+|delivery_city|届け先市町村|string|false|||
+|delivery_address_number|届け先番地|string|false|||
+|delivery_building_name|届け先ビル名|string|true|||
 |post_code|郵便番号|string|false|||
 |prefectures|都道府県|string|false|||
 |city|市町村|string|false|||

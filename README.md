@@ -31,6 +31,8 @@
 |security_code|セキュリティコード|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 ### Association
 - has_many :todos
 - has_many :points
@@ -53,6 +55,8 @@
 |first_name_phonetic|口座名義(メイ)|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- user_id
 ### Association
 - belongs_to :users
 
@@ -67,6 +71,8 @@
 |expiration_date|有効期限|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- user_id
 ### Association
 - belongs_to :users
 
@@ -79,6 +85,8 @@
 |icon_url|評価アイコン|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 ### Association
 - has_many :users, through: :user_evaluation
 
@@ -92,6 +100,8 @@
 |evaluation_id|評価ID|reference|false|foreign_key: true||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- user_id
 ### Association
 - belongs_to :users
 - belongs_to :evaluations
@@ -117,6 +127,9 @@
 |like|いいね数|integer|false|default:0||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
+- seller_id, eshibition_status
 ### Association
 - belongs_to :categories
 - has_many :product_images
@@ -132,6 +145,8 @@
 |image_url|商品画像|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- product_id
 ### Association
 - belongs_to :products
 
@@ -145,6 +160,8 @@
 |comment|コメント|text|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- product_id, comment_user_id
 ### Association
 - belongs_to :products
 
@@ -157,6 +174,8 @@
 |ancestry|階層(子要素/孫要素)|string|true|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 ### Association
 - has_many :brands, through: :category_brand
 - has_many :sizes, through: :category_size
@@ -170,6 +189,8 @@
 |name|ブランド名|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 ### Association
 - has_many :categories, through: :category_brand
 
@@ -178,10 +199,11 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|category_id|カテゴリID|reference|false|foreign_key: true||
 |size|サイズ|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 ### Association
 - has_many :categories, through: :category_size
 
@@ -194,6 +216,8 @@
 |brand_id|ブランドID|reference|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- category_id, brand_id
 ### Association
 - belongs_to :categories
 - belongs_to :brands
@@ -207,6 +231,8 @@
 |size_id|サイズID|reference|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- category_id, size_id
 ### Association
 - belongs_to :categories
 - belongs_to :sizes
@@ -220,6 +246,8 @@
 |like_user_id|(いいねした)ユーザID|reference|false|foreign_key: true||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- product_id, like_user_id
 ### Association
 - belongs_to :users
 - belongs_to :products
@@ -233,6 +261,8 @@
 |todo|やること|text|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- user_id
 ### Association
 - belongs_to :users
 
@@ -246,6 +276,8 @@
 |message_type|メッセージタイプ|string|false||1:all, 2:individual|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- user_id, message_type
 ### Association
 - belongs_to :users
 
@@ -257,6 +289,8 @@
 |status|出品ステータス|string|false||values:出品中,取引中,売却済|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## product_status table
 - 商品の状態を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -266,6 +300,8 @@
 |status|商品ステータス|string|false||values:新品、未使用,未使用に近い,目立った傷や汚れなし,やや傷や汚れあり,傷や汚れあり,全体的に状態が悪い|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## delivery_fee_owners table
 - 配送料金負担者を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -275,6 +311,8 @@
 |delivery_fee_owner|配送料負担者|string|false||values:送料込み(出品者負担),着払い(購入者負担)|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## delivery_methods table
 - 配送方法を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -284,6 +322,8 @@
 |delivery_method|配送方法|string|false||values:未定,らくらくメリカリ便,ゆうメール,レターパック,普通郵便(定形、定形外),クロネコヤマト,ゆうパック,クリックポスト,ゆうパケット|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## prefectures table
 - 都道府県を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -293,6 +333,8 @@
 |prefecture|都道府県|string|false||values:47都道府県＋未定|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## shipping_days table
 - 発送日を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -302,6 +344,8 @@
 |shipping_day|配送日|string|false||values:1〜2日で発送,2〜3日で発送,4〜7日で発送|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## banks table
 - 銀行名を登録する。出品商品画面のセレクトボックス、インクリメンタルサーチで利用予定。
@@ -312,6 +356,8 @@
 |inc_flag|インクリメンタルサーチフラグ|boolean|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key
 
 ## bank_account_types table
 - 口座種別を登録する。出品商品画面のセレクトボックスで利用予定。
@@ -321,3 +367,5 @@
 |account_type|口座種別|string|false||values:普通預金,当座預金,貯蓄預金|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
+### index
+- primary key

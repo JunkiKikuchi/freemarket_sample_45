@@ -73,3 +73,4 @@ gem 'erb2haml'
 gem 'haml-rails'
 
 gem 'devise'
+gem 'font-awesome-rails'

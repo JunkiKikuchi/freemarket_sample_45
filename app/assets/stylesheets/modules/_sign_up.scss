@@ -1,0 +1,166 @@
+@import "./reset";
+
+*{
+  box-sizing: border-box;
+}
+html{
+  overflow-y: auto;
+  height: 756px;
+  body{
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    position: relative;
+    .wrapper{
+      height: 756px;
+      background-color: #f5f5f5;
+      header{
+        width: 100vw;
+        height: 128px;
+        text-align: center;
+        padding-top: 40px;
+        a{
+          margin: 40px auto;
+          .logo{
+            height: 49px;
+            width: 185px;
+            line-height: 49px;
+            display: inline-block;
+          }
+        }
+      }
+      .main{
+        height: 400px;
+        text-align: center;
+        text-decoration: none;
+        &__box{
+          background-color: white;
+          width: 700px;
+          height: 100%;
+          margin: 0 auto;
+          &--header{
+            height: 100px;
+            border-bottom: 1px solid #eee;
+            h1{
+              font-family:monospace;
+              font-size: 22px;
+              padding: 32px 16px;
+            }
+          }
+          &--contents{
+            padding: 64px;
+            .contents__regist{
+              max-width: 320px;
+              list-style: none;
+              height: 184px;
+              margin: 0 auto;
+              &--mail{
+                text-decoration: none;
+                color: #000;
+                position: relative;
+                background-color: #eee;
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                i{
+                  position: absolute;
+                  top: 50%;
+                  left: 16px;
+                  transform: translate(0, -50%);
+                  color: #ccc;
+                  font-size: 20px;
+
+                  display: inline-block;
+                  speak: none;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                }
+              }
+              &--facebook{
+                margin: 16px 0 0;
+                background-color: #385185;
+                color: #fff;
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                position: relative;
+                i{
+                  position: absolute;
+                  top: 50%;
+                  left: 16px;
+                  transform: translate(0, -50%);
+                  font-size: 30px;
+
+                  color: #fff;
+                  background: #385185;
+
+                  display: inline-block;
+                  speak: none;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                }
+              }
+              &--google{
+                margin: 16px 0 0;
+                background: no-repeat;
+                background-color: #fff;
+                background-image: url('http://image.news.livedoor.com/newsimage/7/c/7cfd3_1223_ddf1a242_1acb6e23-m.jpg') ;
+                background-size: 6%;
+                background-position:20px;
+                border: #979797 solid 1px;
+                color: #333;
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+      footer{
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 220px;
+        margin: 0 auto;
+        .terms{
+          width: 100vw;
+          li{
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 12px;
+            margin-top: 40px;
+            a{
+              text-decoration: none;
+              color: black;
+            }
+          }
+        }
+        .footer__logo{
+          height: 65px;
+          width: 80px;
+          margin: 40px auto 0;
+          display: block;
+        }
+        p{
+          margin: 5px auto;
+          width: 456px;
+          small{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

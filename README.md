@@ -121,6 +121,8 @@
 |brand|ブランド|string|true|||
 |delivery_fee_owner|配送料負担者|string|false|||
 |shipping_source_area|配送先エリア|string|false|||
+|shipping_days|発送日数|string|false|||
+|delivery_method|配送方法|string|false|||
 |exhibition_status|出品ステータス|string|false|||
 |product_status|商品ステータス|string|false|||
 |size|サイズ|string|true|||
@@ -341,7 +343,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|shipping_day|配送日|string|false||values:1〜2日で発送,2〜3日で発送,4〜7日で発送|
+|shipping_days|発送日数|string|false||values:1〜2日で発送,2〜3日で発送,4〜7日で発送|
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### index

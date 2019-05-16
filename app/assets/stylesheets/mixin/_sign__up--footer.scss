@@ -1,0 +1,38 @@
+@mixin sign__up--footer(){
+  .sign__up--footer{
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 220px;
+    margin: 0 auto;
+    &__terms{
+      width: 100vw;
+      li{
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 12px;
+        margin-top: 40px;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    &__logo{
+      height: 65px;
+      width: 80px;
+      margin: 40px auto 0;
+      display: block;
+    }
+    p{
+      margin: 5px auto;
+      width: 456px;
+      small{
+        font-size: 12px;
+      }
+    }
+  }
+}

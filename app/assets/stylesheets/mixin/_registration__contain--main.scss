@@ -1,0 +1,102 @@
+@mixin grandchild__select(){
+  select{
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+  }
+}
+
+@mixin icon(){
+  i{
+    right: 12px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 25px;
+    transform: translate(0, -50%);
+    display: inline-block;
+  }
+}
+
+@mixin registration__contain--main(){
+  label{
+    font-weight: 550;
+    display: inline-block;
+  }
+  .require{
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  input{
+    width: 100%;
+    margin: 8px 0 0;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  h3{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+    margin: 8px 0 0;
+  }
+  .form__child--grandchild{
+    &__birthday{
+      &__year{
+        display: inline-block;
+        width: 76px;
+        margin: 8px 0;
+        position: relative;
+        span{
+          margin: 0 2px;
+        }
+        @include icon;
+        @include grandchild__select;
+      }
+      &__month{
+        display: inline-block;
+        width: 76px;
+        margin: 8px 0;
+        position: relative;
+        span{
+          margin: 0 2px;
+        }
+        @include icon;
+        @include grandchild__select;
+      }
+      &__day{
+        display: inline-block;
+        position: relative;
+        width: 76px;
+        margin: 8px 0;
+        span{
+          margin: 0 2px;
+        }
+        @include icon;
+        @include grandchild__select;
+      }
+    }
+  }
+}
+

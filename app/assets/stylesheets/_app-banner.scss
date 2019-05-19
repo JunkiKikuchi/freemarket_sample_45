@@ -1,0 +1,53 @@
+.app-banner{
+  background-image: url("https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?40116333");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  &__pc{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: $white;
+    &__inner{
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      h2{
+        font-size: 24px;
+      }
+      p{
+        font-size: 35px;
+        margin: 10px 0 0;
+      }
+      &__icon{
+        margin: 20px 0 0;
+        display: flex;
+        ul.flex{
+          display: flex;
+          margin: 0 0 0 24px;
+          line-height: 68px;
+          transform: translate(-40px, 30px);
+          li{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    figure.right-phone{
+      position: absolute;
+      top: 0;
+      right: -30px;
+      bottom: 0;
+      width: 300px;
+      height: 100%;
+      img{
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}

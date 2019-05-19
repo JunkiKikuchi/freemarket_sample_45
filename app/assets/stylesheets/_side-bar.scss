@@ -1,0 +1,48 @@
+.l-side{
+  width: 280px;
+  margin: 0 40px 0 0;
+  &__mypage-nav{
+    &__list{
+      list-style: none;
+      &__item{
+        display: block;
+        position: relative;
+        min-height: 48px;
+        background: $white;
+        color: $text-color;
+        margin: 0;
+        line-height: 50px;
+        text-decoration: none;
+        li{
+          padding-left: 16px;
+          border-top: 1px solid $light-gray;
+          &:hover{
+            background-color: #f9f9f9;
+          }
+        }
+        i{
+          padding-right: 16px;
+          float: right;
+          color: #ccc;
+          line-height: 48px;
+          font-size: 26px;
+        }
+      }
+    }
+    &__head{
+      margin: 40px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    
+    }
+  }
+}
+.nowhere{
+  background-color: $light-gray;
+  font-weight: 600;
+  i{
+    font-weight: 600;
+    color: #333;
+  }
+}

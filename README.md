@@ -327,17 +327,6 @@
 ### index
 - primary key
 
-## prefectures table
-- 都道府県を登録する。出品商品画面のセレクトボックスで利用予定。
-
-|column_physical|column_logic|type|null|options|remarks|
-|---------------|------------|----|----|-------|-------|
-|prefecture|都道府県|string|false||values:47都道府県＋未定|
-|created_at|登録日時|datetime|false|||
-|updated_at|更新日時|datetime|false|||
-### index
-- primary key
-
 ## shipping_days table
 - 発送日を登録する。出品商品画面のセレクトボックスで利用予定。
 

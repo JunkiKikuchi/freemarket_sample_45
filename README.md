@@ -15,6 +15,21 @@
 |profile|プロフィール|text|true|||
 |birth|生年月日|string|false|||
 |tel|電話番号|string|false|||
+### index
+- primary key
+### Association
+- has_many :todos
+- has_many :points
+- has_many :bank_accounts
+- has_many :news
+- has_many :evaluations, through: :user_evaluation
+- has_many :products, through: :likes
+
+## user_address table
+- メルカリ利用ユーザの住所情報を登録する。
+
+|column_physical|column_logic|type|null|options|remarks|
+|---------------|------------|----|----|-------|-------|
 |delivery_post_code|届け先郵便番号|string|false|||
 |delivery_prefectures|届け先都道府県|string|false|||
 |delivery_city|届け先市町村|string|false|||
@@ -25,6 +40,16 @@
 |city|市町村|string|false|||
 |address_number|番地|string|false|||
 |building_name|ビル名|string|false|||
+### index
+- primary key
+### Association
+- has_one :user
+
+## credit_cards table
+- メルカリ利用ユーザのクレジットカード情報を登録する。
+
+|column_physical|column_logic|type|null|options|remarks|
+|---------------|------------|----|----|-------|-------|
 |card_number|カード番号|string|false|||
 |expiration_year|有効期限(年)|string|false|||
 |expiration_month|有効期限(月)|string|false|||
@@ -34,12 +59,7 @@
 ### index
 - primary key
 ### Association
-- has_many :todos
-- has_many :points
-- has_many :bank_accounts
-- has_many :news
-- has_many :evaluations, through: :user_evaluation
-- has_many :products, through: :likes
+- has_one :user
 
 ## bank_accounts table
 - ユーザの口座情報を登録する。

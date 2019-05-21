@@ -58,7 +58,7 @@
 ### index
 - user_id
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 ## points table
 - ユーザの所有ポイントを管理する。
@@ -74,7 +74,7 @@
 ### index
 - user_id
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 ## evaluations table
 - 評価値と画面表示用アイコンを登録する。
@@ -103,8 +103,8 @@
 ### index
 - user_id
 ### Association
-- belongs_to :users
-- belongs_to :evaluations
+- belongs_to :user
+- belongs_to :evaluation
 
 ## products table
 - 出品商品を登録する。出品ステータスによって、出品/購入を管理し、履歴としても利用する。
@@ -133,7 +133,7 @@
 - primary key
 - seller_id, eshibition_status
 ### Association
-- belongs_to :categories
+- belongs_to :category
 - has_many :product_images
 - has_many :comments
 - has_many :users, through: :likes
@@ -150,7 +150,7 @@
 ### index
 - product_id
 ### Association
-- belongs_to :products
+- belongs_to :product
 
 ## comments table
 - 商品へのコメントを登録する。
@@ -165,7 +165,7 @@
 ### index
 - product_id, comment_user_id
 ### Association
-- belongs_to :products
+- belongs_to :product
 
 ## categories table
 - 商品カテゴリを登録する。gemのancestryを使用予定。
@@ -221,8 +221,8 @@
 ### index
 - category_id, brand_id
 ### Association
-- belongs_to :categories
-- belongs_to :brands
+- belongs_to :category
+- belongs_to :brand
 
 ## category_size table
 - 各カテゴリの孫要素に紐付くサイズを登録する。
@@ -236,8 +236,8 @@
 ### index
 - category_id, size_id
 ### Association
-- belongs_to :categories
-- belongs_to :sizes
+- belongs_to :categorie
+- belongs_to :size
 
 ## likes table
 - 商品に対してのいいねを登録する。集計も当テーブルを利用予定。
@@ -251,8 +251,8 @@
 ### index
 - product_id, like_user_id
 ### Association
-- belongs_to :users
-- belongs_to :products
+- belongs_to :user
+- belongs_to :product
 
 ## todos table
 - ユーザのやることリストを管理する。
@@ -266,7 +266,7 @@
 ### index
 - user_id
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 ## news table
 - ニュース一覧および個別のお知らせを管理する。
@@ -281,7 +281,7 @@
 ### index
 - user_id, message_type
 ### Association
-- belongs_to :users
+- belongs_to :user
 
 ## exhibition_status table
 - 出品状態を登録する。

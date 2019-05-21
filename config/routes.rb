@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root 'products#index'
   get 'products' => 'products#index'
   get 'registrations' => 'registrations#index'
+  get 'phones' => 'phones#index'
 end

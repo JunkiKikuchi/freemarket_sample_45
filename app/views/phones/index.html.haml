@@ -1,0 +1,41 @@
+.phone__confirmation
+  %header
+    %a{href: "#"}
+      %img.logo{alt: "", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?376951604"}
+    .registration__bar
+      %ol
+        %li
+          会員情報
+          .nav__bar.nav__bar--first.phone__bar--after
+        %li.l--first
+          電話番号認証
+          .nav__bar.nav__bar--after.phone__bar
+        %li
+          お届け先住所入力
+          .nav__bar.nav__bar--after
+        %li
+          支払い方法
+          .nav__bar.nav__bar--after
+        %li
+          完了
+          .nav__bar.nav__bar--last
+
+  .phone__confirmation--main
+    .phone__confirmation--main__contents
+      %h2 電話番号の確認
+      %form.form__phone{action: "address", method: "get"}
+        .phone__contents
+          .phone__contents--number
+            %label 携帯電話の番号
+            %input.phone__input{type: "tel", placeholder:"携帯電話の番号を入力"}
+          %p
+            本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
+          %button.phone__button{type: "submit"} SMSを送信する
+          %p
+            ※電話番号は本人確認や不正防止のために利用します。他のユーザーに公開されることはありません。
+          .phone__contents--text__right
+            %a{href: "#"}
+              電話番号の確認が必要な理由
+              %i.fas.fa-angle-right
+
+  = render 'devise/registrations/sign_up_footer'

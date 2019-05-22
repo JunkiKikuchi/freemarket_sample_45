@@ -1,0 +1,84 @@
+@import "./mixin/_sign__up--footer";
+@import "./mixin/registration__header";
+
+.phone__confirmation{
+  height: 880px;
+  background: #f5f5f5;
+  @include registration__header();
+
+  &--main{
+    display: block;
+    &__contents{
+      width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      h2{
+        font-size: 24px;
+        padding: 8px 24px;
+        font-weight: 600;
+        border-bottom: 1px solid #f5f5f5;
+        text-align: center;
+      }
+      .form__phone{
+        padding: 64px;
+        border-top: 1px solid #f5f5f5;
+        .phone__contents{
+          max-width: 320px;
+          margin: 0 auto;
+          &--number{
+            margin: 0;
+            label{
+              font-weight:600;
+              display: inline-block;
+              color: #333;
+            }
+            .phone__input{
+              width: 100%;
+              margin: 8px 0 0;
+              height: 48px;
+              padding: 10px 16px 8px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
+            }
+          }
+          p{
+            margin: 8px 0 0;
+            line-height: 1.5;
+            color: #333;
+            font-size: 13.5px;
+          }
+          .phone__button{
+            margin: 40px 0 0;
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+          }
+          &--text__right{
+            margin: 40px 0 0;
+            text-align: right;
+            a{
+              color: #0099e8;
+              text-decoration: none;
+              .fas{
+                font-weight: 900;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include sign__up--footer();
+}
+

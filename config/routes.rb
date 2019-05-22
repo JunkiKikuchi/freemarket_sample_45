@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'products' => 'products#index'
   get 'registrations' => 'registrations#index'
   get 'phones' => 'phones#index'
+  get 'address' => 'address_confirmation#index'
 end

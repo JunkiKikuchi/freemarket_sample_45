@@ -1,0 +1,88 @@
+@import "./mixin/_nav__bar_before_after";
+
+@mixin registration__header(){
+  header{
+    height: 128px;
+    text-align: center;
+    a{
+      display:inline-block;
+      margin: 40px 0 0;
+      .logo{
+        height: 49px;
+        width: 185px;
+        line-height: 49px;
+        display: inline-block;
+        margin: 0 8px 0 0;
+      }
+    }
+    .registration__bar{
+      display: inline-block;
+      padding: 40px 0 0 10px;
+      border: 0 ;
+      vertical-align: top;
+      font-size: 0;
+      text-align: center;
+      ol{
+        margin: 0 ;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        .l--first{
+          color: #ea352d;
+          font-weight: 600;
+        }
+        li{
+          margin: 0 40px 0 0;
+          display: inline-block;
+          min-width: 60px;
+          font-size: 12px;
+          z-index: 1;
+          position: relative;
+          color: #888;
+          .nav__bar{
+            background: #ccc;
+            width: 12px;
+            height: 12px;
+            margin: 8px auto 0;
+            border-radius: 50%;
+            &--first{
+              background: #ea352d;
+              &::after{
+                left: 50%;
+                background-color: #ea352d;
+                @include nav__bar_before_after();
+              }
+            }
+
+            &--after::before{
+              right: 50%;
+              background: #ccc;
+              @include nav__bar_before_after();
+            }
+            &--after::after{
+              left: 50%;
+              background: #ccc;
+              @include nav__bar_before_after();
+            }
+            &--last::before{
+              right: 50%;
+              background: #ccc;
+              @include nav__bar_before_after();
+            }
+          }
+          .phone__bar{
+            background: #ea352d;
+            &::before{
+            right: 50%;
+            background: #ea352d;
+            @include nav__bar_before_after();
+            }
+          }
+        }
+      }
+    }
+  }
+}

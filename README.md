@@ -24,6 +24,8 @@
 - has_many :news
 - has_many :evaluations, through: :user_evaluation
 - has_many :products, through: :likes
+- has_one :user_address
+- has_one :credit_card
 
 ## user_address table
 - メルカリ利用ユーザの住所情報を登録する。
@@ -43,7 +45,7 @@
 ### index
 - primary key
 ### Association
-- has_one :user
+- belongs_to :user
 
 ## credit_cards table
 - メルカリ利用ユーザのクレジットカード情報を登録する。
@@ -59,7 +61,7 @@
 ### index
 - primary key
 ### Association
-- has_one :user
+- belongs_to :user
 
 ## bank_accounts table
 - ユーザの口座情報を登録する。

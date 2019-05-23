@@ -375,14 +375,3 @@
 |updated_at|更新日時|datetime|false|||
 ### index
 - primary key
-
-## bank_account_types table
-- 口座種別を登録する。出品商品画面のセレクトボックスで利用予定。
-
-|column_physical|column_logic|type|null|options|remarks|
-|---------------|------------|----|----|-------|-------|
-|account_type|口座種別|string|false||values:普通預金,当座預金,貯蓄預金|
-|created_at|登録日時|datetime|false|||
-|updated_at|更新日時|datetime|false|||
-### index
-- primary key

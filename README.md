@@ -194,12 +194,12 @@
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
 |product_id|商品ID|reference|false|foreign_key: true||
-|comment_user_id|(コメントした)ユーザID|reference|false|foreign_key: true||
+|user_id|(コメントした)ユーザID|reference|false|foreign_key: true||
 |comment|コメント|text|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### index
-- product_id, comment_user_id
+- product_id, user_id
 ### Association
 - belongs_to :product
 - belongs_to :user
@@ -282,11 +282,11 @@
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
 |product_id|商品ID|reference|false|foreign_key: true||
-|like_user_id|(いいねした)ユーザID|reference|false|foreign_key: true||
+|user_id|(いいねした)ユーザID|reference|false|foreign_key: true||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### index
-- product_id, like_user_id
+- product_id, user_id
 ### Association
 - belongs_to :user
 - belongs_to :product

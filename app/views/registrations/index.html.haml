@@ -65,18 +65,18 @@
             %label  生年月日
             %span.require  必須
             .form__child--grandchild
-              .form__child--grandchild__birthday
-                .form__child--grandchild__birthday__year
+              .form__child--grandchild__birthdays
+                .form__child--grandchild__birthdays__birthday
                   %select
                     = render 'devise/registrations/sign_up_year'
                   %i.fas.fa-angle-down
                 %span.form__grandchild  年
-                .form__child--grandchild__birthday__month
+                .form__child--grandchild__birthday
                   %select
                     = render 'devise/registrations/sign_up_month'
                   %i.fas.fa-angle-down
                 %span.form__grandchild  月
-                .form__child--grandchild__birthday__day
+                .form__child--grandchild__birthday
                   %select
                     = render 'devise/registrations/sign_up_days'
                   %i.fas.fa-angle-down

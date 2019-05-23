@@ -85,8 +85,8 @@
     margin: 8px 0 0;
   }
   .form__child--grandchild{
-    &__birthday{
-      &__year{
+    &__birthdays{
+      &__birthday{
         display: inline-block;
         width: 76px;
         margin: 8px 0;
@@ -97,22 +97,13 @@
         @include icon;
         @include grandchild__select;
       }
-      &__month{
+    }
+    &__limits{
+      &__limit{
         display: inline-block;
         width: 76px;
         margin: 8px 0;
         position: relative;
-        span{
-          margin: 0 2px;
-        }
-        @include icon;
-        @include grandchild__select;
-      }
-      &__day{
-        display: inline-block;
-        position: relative;
-        width: 76px;
-        margin: 8px 0;
         span{
           margin: 0 2px;
         }

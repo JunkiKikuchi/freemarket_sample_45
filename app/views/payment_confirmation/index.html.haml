@@ -1,0 +1,69 @@
+.payment__confirmation
+  %header
+    %a{href: "#"}
+      %img.logo{alt: "", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?376951604"}
+    .registration__bar
+      %ol
+        %li
+          会員情報
+          .nav__bar.nav__bar--first.phone__bar--after
+        %li
+          電話番号認証
+          .nav__bar.nav__bar--first.phone__bar
+        %li
+          お届け先住所入力
+          .nav__bar.nav__bar--first.phone__bar
+        %li.l--first
+          支払い方法
+          .nav__bar.nav__bar--after.phone__bar
+        %li
+          完了
+          .nav__bar.nav__bar--last
+
+  .payment__confimation--main
+    .payment__confirmation--main--container
+      .container__header
+        %h2 支払方法
+      .container__main
+        %form.container__main--form{action: "registration_finish", method: "get"}
+          .form__child--first
+            %label  カード
+            %span.require  必須
+            %input{type: "text", placeholder: "半角数字のみ"}
+            .card__icons
+              = image_tag "visa_icon.png", class: "card__icon", alt: ""
+              = image_tag "mastercard_icon.png", class: "card__icon", alt: ""
+              = image_tag "saison-card.png", class: "card__icon",
+              alt: ""
+              =image_tag "jcb-card_icon.png", class: "card__icon", alt: ""
+              = image_tag "american-express_icon", class: "card__icon", alt: ""
+              =image_tag "diners-club-card_icon", class: "card__icon", alt: ""
+              = image_tag "discover_icon.png", class: "card__icon", alt: ""
+          .form__child
+            %label  有効期限
+            %span.require  必須
+            .form__child--grandchild
+              .form__child--grandchild__limits
+                .form__child--grandchild__limits__limit
+                  %select
+                    = render 'payment_limit_month'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  月
+                .form__child--grandchild__limits__limit
+                  %select
+                    = render 'payment_limit_year'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  年
+          .form__child
+            %label  セキュリティコード
+            %span.require  必須
+            %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号"}
+          .form__child
+            %p.text__right
+              %a{href: "#"}
+                カード裏面の番号とは？
+                %i.fas.fa-angle-right
+          .form__child
+            %button{type: "submit"}次へ進む
+
+  = render 'devise/registrations/sign_up_footer'

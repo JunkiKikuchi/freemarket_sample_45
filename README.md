@@ -309,17 +309,6 @@
 ### Association
 - belongs_to :user
 
-## exhibition_status table
-- 出品状態を登録する。
-
-|column_physical|column_logic|type|null|options|remarks|
-|---------------|------------|----|----|-------|-------|
-|status|出品ステータス|string|false||values:出品中,取引中,売却済|
-|created_at|登録日時|datetime|false|||
-|updated_at|更新日時|datetime|false|||
-### index
-- primary key
-
 ## product_status table
 - 商品の状態を登録する。出品商品画面のセレクトボックスで利用予定。
 

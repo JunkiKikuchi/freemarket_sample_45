@@ -26,10 +26,27 @@
 - has_many :evaluations, through: :user_evaluation
 - has_many :products, through: :likes
 - has_one :user_address
+- has_one :shipping_address
 - has_one :credit_card
 
 ## user_address table
 - メルカリ利用ユーザの住所情報を登録する。
+
+|column_physical|column_logic|type|null|options|remarks|
+|---------------|------------|----|----|-------|-------|
+|user_id|ユーザID|reference|false|foreign_key: true||
+|post_code|郵便番号|string|false|||
+|prefectures|都道府県|string|false|||
+|city|市町村|string|false|||
+|address_number|番地|string|false|||
+|building_name|ビル名|string|false|||
+### index
+- primary key
+### Association
+- belongs_to :user
+
+## shipping_address table
+- メルカリ利用ユーザの配送先情報を登録する。
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
@@ -39,11 +56,6 @@
 |delivery_city|届け先市町村|string|false|||
 |delivery_address_number|届け先番地|string|false|||
 |delivery_building_name|届け先ビル名|string|true|||
-|post_code|郵便番号|string|false|||
-|prefectures|都道府県|string|false|||
-|city|市町村|string|false|||
-|address_number|番地|string|false|||
-|building_name|ビル名|string|false|||
 ### index
 - primary key
 ### Association

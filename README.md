@@ -22,6 +22,7 @@
 - has_many :points
 - has_many :bank_accounts
 - has_many :news
+- has_many :comments
 - has_many :evaluations, through: :user_evaluation
 - has_many :products, through: :likes
 - has_one :user_address
@@ -190,6 +191,7 @@
 - product_id, comment_user_id
 ### Association
 - belongs_to :product
+- belongs_to :user
 
 ## categories table
 - 商品カテゴリを登録する。gemのancestryを使用予定。
@@ -260,7 +262,7 @@
 ### index
 - category_id, size_id
 ### Association
-- belongs_to :categorie
+- belongs_to :category
 - belongs_to :size
 
 ## likes table

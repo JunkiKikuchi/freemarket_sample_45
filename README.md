@@ -369,7 +369,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
-|name|銀行名|string|false||values:三菱UFJ銀行,みずほ銀行,りそな銀行,埼玉りそな銀行,三井住友銀行,ジャパンネット銀行,楽天銀行,ゆうちょ銀行|
+|name|銀行名|string|false||values:三菱UFJ銀行,みずほ銀行,りそな銀行,埼玉りそな銀行,三井住友銀行,ジャパンネット銀行,楽天銀行,ゆうちょ銀行,他|
 |inc_flag|インクリメンタルサーチフラグ|boolean|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||

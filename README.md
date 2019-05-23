@@ -7,14 +7,9 @@
 |nickname|ニックネーム|string|false|||
 |email|メールアドレス|string|false|unique: true||
 |password|パスワード|string|false|||
-|last_name|姓|string|false|||
-|first_name|名|string|false|||
-|last_name_phonetic|姓(カナ)|string|false|||
-|first_name_phonetic|名(カナ)|string|false|||
 |icon_image|アイコン画像|string|true|||
-|profile|プロフィール|text|true|||
-|birth|生年月日|string|false|||
-|tel|電話番号|string|false|||
+|created_at|登録日時|datetime|false|||
+|updated_at|更新日時|datetime|false|||
 ### index
 - primary key
 ### Association
@@ -25,9 +20,30 @@
 - has_many :comments
 - has_many :evaluations, through: :user_evaluation
 - has_many :products, through: :likes
+- has_one :user_profile
 - has_one :user_address
 - has_one :shipping_address
 - has_one :credit_card
+
+## user_profiles table
+- メルカリ利用ユーザのプロフィールを登録する。
+
+|column_physical|column_logic|type|null|options|remarks|
+|---------------|------------|----|----|-------|-------|
+|user_id|ユーザID|reference|false|foreign_key: true||
+|last_name|姓|string|false|||
+|first_name|名|string|false|||
+|last_name_phonetic|姓(カナ)|string|false|||
+|first_name_phonetic|名(カナ)|string|false|||
+|profile|プロフィール|text|true|||
+|birth|生年月日|string|false|||
+|tel|電話番号|string|false|||
+|created_at|登録日時|datetime|false|||
+|updated_at|更新日時|datetime|false|||
+### index
+- primary key
+### Association
+- belongs_to :user
 
 ## user_address table
 - メルカリ利用ユーザの住所情報を登録する。
@@ -40,6 +56,8 @@
 |city|市町村|string|false|||
 |address_number|番地|string|false|||
 |building_name|ビル名|string|false|||
+|created_at|登録日時|datetime|false|||
+|updated_at|更新日時|datetime|false|||
 ### index
 - primary key
 ### Association
@@ -56,6 +74,8 @@
 |delivery_city|届け先市町村|string|false|||
 |delivery_address_number|届け先番地|string|false|||
 |delivery_building_name|届け先ビル名|string|true|||
+|created_at|登録日時|datetime|false|||
+|updated_at|更新日時|datetime|false|||
 ### index
 - primary key
 ### Association

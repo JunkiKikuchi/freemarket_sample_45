@@ -114,12 +114,11 @@
 - belongs_to :user
 
 ## evaluations table
-- 評価値と画面表示用アイコンを登録する。
+- 評価値を登録する。
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
 |evaluation|評価|string|false||value:良い,普通,悪い|
-|icon_url|評価アイコン|string|false|||
 |created_at|登録日時|datetime|false|||
 |updated_at|更新日時|datetime|false|||
 ### index

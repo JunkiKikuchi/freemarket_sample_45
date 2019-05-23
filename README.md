@@ -32,6 +32,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
+|user_id|ユーザID|reference|false|foreign_key: true||
 |delivery_post_code|届け先郵便番号|string|false|||
 |delivery_prefectures|届け先都道府県|string|false|||
 |delivery_city|届け先市町村|string|false|||
@@ -52,6 +53,7 @@
 
 |column_physical|column_logic|type|null|options|remarks|
 |---------------|------------|----|----|-------|-------|
+|user_id|ユーザID|reference|false|foreign_key: true||
 |card_number|カード番号|string|false|||
 |expiration_year|有効期限(年)|string|false|||
 |expiration_month|有効期限(月)|string|false|||

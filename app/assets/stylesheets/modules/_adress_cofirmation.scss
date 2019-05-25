@@ -2,6 +2,7 @@
 @import "./mixin/registration__header";
 @import "./mixin/_registration__contain--main";
 @import "registration";
+@import "./mixin/next__button";
 
 .adress__confirmation{
   background: #f5f5f5;
@@ -45,20 +46,7 @@
               font-weight: 600;
             }
             @include registration__contain--main();
-            button{
-              margin: 40px 0 0;
-              background: #ea352d;
-              border: 1px solid #ea352d;
-              color: #fff;
-              display: block;
-              width: 100%;
-              line-height: 48px;
-              font-size: 14px;
-              transition: all ease-out .3s;
-              cursor: pointer;
-              text-align: center;
-              min-height: 1.5em;
-            }
+            @include next__button();
           }
         }
       }

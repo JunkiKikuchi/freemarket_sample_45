@@ -1,7 +1,6 @@
 .phone__confirmation
   %header
-    %a{href: "#"}
-      %img.logo{alt: "", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?376951604"}
+    = render "./sign/sign_up--header"
     .registration__bar
       %ol
         %li
@@ -38,4 +37,4 @@
               電話番号の確認が必要な理由
               %i.fas.fa-angle-right
 
-  = render 'devise/registrations/sign_up_footer'
+  = render "./sign/sign_up_footer"

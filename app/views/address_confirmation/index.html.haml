@@ -1,7 +1,6 @@
 .adress__confirmation
   %header
-    %a{href: "#"}
-      %img.logo{alt: "", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?376951604"}
+    = render "./sign/sign_up--header"
     .registration__bar
       %ol
         %li
@@ -64,4 +63,4 @@
             %input{type: "text", placeholder: "例）09012345678"}
           .form__child
             %button{type: "submit"}次へ進む
-  = render 'devise/registrations/sign_up_footer'
+  = render "./sign/sign_up_footer"

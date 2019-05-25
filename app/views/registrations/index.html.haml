@@ -1,7 +1,7 @@
 .registration__wrapper
   %header
-    %a{href: "#"}
-      %img.logo{alt: "", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?376951604"}
+    = render "./sign/sign_up--header"
+
     .registration__bar
       %ol
         %li.l--first
@@ -71,12 +71,12 @@
                     = render 'devise/registrations/sign_up_year'
                   %i.fas.fa-angle-down
                 %span.form__grandchild  年
-                .form__child--grandchild__birthday
+                .form__child--grandchild__birthdays__birthday
                   %select
                     = render 'devise/registrations/sign_up_month'
                   %i.fas.fa-angle-down
                 %span.form__grandchild  月
-                .form__child--grandchild__birthday
+                .form__child--grandchild__birthdays__birthday
                   %select
                     = render 'devise/registrations/sign_up_days'
                   %i.fas.fa-angle-down
@@ -97,5 +97,4 @@
               %a{href: "#"}
                 本人情報の登録について
                 %i.fas.fa-angle-right
-
-  = render 'devise/registrations/sign_up_footer'
+  = render "./sign/sign_up_footer"

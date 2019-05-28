@@ -1,7 +1,7 @@
-.payment__confirmation
+.payment_confirmation
   %header
     = render "./sign/sign_up--header"
-    .registration__bar
+    .registration_bar
       %ol
         %li
           会員情報
@@ -19,12 +19,12 @@
           完了
           .nav__bar.nav__bar--last
 
-  .payment__confimation--main
-    .payment__confirmation--main--container
-      .container__header
+  .payment_confirmation_main
+    .payment__container
+      .payment__container--header
         %h2 支払方法
-      .container__main
-        %form.container__main--form{action: "registration_finish", method: "get"}
+      .payment__container--main
+        %form.payment_form{action: "registration_finish", method: "get"}
           .form__child--first
             %label  カード
             %span.require  必須
@@ -58,7 +58,7 @@
             %span.require  必須
             %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号"}
           .form__child
-            %p.text__right
+            %p.text_right
               %a{href: "#"}
                 カード裏面の番号とは？
                 %i.fas.fa-angle-right

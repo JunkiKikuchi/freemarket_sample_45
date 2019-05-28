@@ -4,11 +4,11 @@
 @import "./mixin/next__button";
 @import "./mixin/_color";
 
-.sign_in--wrapper{
+.sign_in_wrapper{
   height: 1150px;
   background: $background-all;
-  @include registration__header();
-  .sign_in--form{
+  @include registration_header();
+  .sign_in_form{
     .login__contents{
       background: $white;
       margin: 0 auto;
@@ -86,7 +86,7 @@
           }
           @include next__button();
         }
-        .password__forget{
+        .password_forget{
           display: block;
           margin: 40px 0 0;
           color: $text-blue;

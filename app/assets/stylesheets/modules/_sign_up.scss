@@ -13,10 +13,10 @@ html{
   body{
     font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
     position: relative;
-    .sign__up--wrapper{
+    .sign_up{
       height: 756px;
       background-color: $background-all;
-      @include registration__header();
+      @include registration_header();
       .main{
         height: 400px;
         text-align: center;

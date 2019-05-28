@@ -1,7 +1,7 @@
-.phone__confirmation
+.phone_confirmation
   %header
     = render "./sign/sign_up--header"
-    .registration__bar
+    .registration_bar
       %ol
         %li
           会員情報
@@ -19,20 +19,20 @@
           完了
           .nav__bar.nav__bar--last
 
-  .phone__confirmation--main
-    .phone__confirmation--main__contents
+  .phone_main
+    .phone_main_contents
       %h2 電話番号の確認
-      %form.form__phone{action: "address", method: "get"}
+      %form.form_phone{action: "address", method: "get"}
         .phone__contents
           .phone__contents--number
             %label 携帯電話の番号
-            %input.phone__input{type: "tel", placeholder:"携帯電話の番号を入力"}
+            %input.phone_input{type: "tel", placeholder:"携帯電話の番号を入力"}
           %p
             本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
-          %button.phone__button{type: "submit"} SMSを送信する
+          %button{type: "submit"} SMSを送信する
           %p
             ※電話番号は本人確認や不正防止のために利用します。他のユーザーに公開されることはありません。
-          .phone__contents--text__right
+          .phone__contents--text
             %a{href: "#"}
               電話番号の確認が必要な理由
               %i.fas.fa-angle-right

@@ -1,7 +1,7 @@
-.adress__confirmation
+.adress_confirmation
   %header
     = render "./sign/sign_up--header"
-    .registration__bar
+    .registration_bar
       %ol
         %li
           会員情報
@@ -18,12 +18,12 @@
         %li
           完了
           .nav__bar.nav__bar--last
-  .adress__confirmation--main
-    .adress__confirmation--main--container
-      .container__header
+  .address_main
+    .address_main__container
+      .address_main__container--header
         %h2 住所入力
-      .container__main
-        %form.container__main--form{action: "payment", method: "get"}
+      .address_main__container--main
+        %form.adress_form{action: "payment", method: "get"}
           .form__child--first
             %label  お名前
             %span.require  必須

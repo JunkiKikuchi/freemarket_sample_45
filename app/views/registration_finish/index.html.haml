@@ -1,7 +1,7 @@
-.registration__finish
+.registration_finish
   %header
     = render "./sign/sign_up--header"
-    .registration__bar
+    .registration_bar
       %ol
         %li
           会員情報
@@ -19,14 +19,14 @@
           完了
           .nav__bar.nav__bar--last.phone__bar
 
-  .registration__finish--main
-    .registration__finish--main--container
-      .container__header
+  .finish_main
+    .finish_main__container
+      .finish_main__container--header
         %h2 会員登録完了
-      .container__main
-        %form.container__main--form{action: "registrations", method: "get"}
+      .finish_main__container--main
+        %form.finish_form{action: "registrations", method: "get"}
           .form__child
-            %p.main__text
+            %p.main_text
               ありがとうございます。
               %br
               会員登録が完了しました。

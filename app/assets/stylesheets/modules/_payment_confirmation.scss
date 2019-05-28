@@ -4,18 +4,18 @@
 @import "./mixin/next__button";
 
 
-.payment__confirmation{
+.payment_confirmation{
   background: $background-all;
   height: 1100px;
-  @include registration__header();
-  &--main{
+  @include registration_header();
+  .payment_confirmation_main{
     display: block;
     margin-bottom: 40px;
-    &--container{
+    .payment__container{
       width: 700px;
       margin: 0 auto;
       background-color: $white;
-      .container__header{
+      &--header{
         h2{
           padding: 32px 16px;
           font-size: 22px;
@@ -24,10 +24,10 @@
           font-weight: 600;
         }
       }
-      .container__main{
+      &--main{
         padding: 40px 16px;
         border-top: 1px solid $background-all;
-        .container__main--form{
+        .payment_form{
           max-width: 320px;
           margin: 0 auto;
           .form__child--first{
@@ -54,7 +54,7 @@
               font-weight: 600;
             }
             @include registration__contain--main();
-            .text__right{
+            .text_right{
               text-align: right;
               padding: 0;
               a{

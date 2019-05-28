@@ -6,15 +6,15 @@
 @import "./mixin/next__button";
 @import "./mixin/_color";
 
-.registration__wrapper{
+.registration_wrapper{
   height: 2104px;
   box-sizing: border-box;
   background-color: $background-all;
-  @include registration__header();
+  @include registration_header();
 
-  .registration__main{
+  .registration_main{
     display: block;
-    &--container{
+    &__container{
       width: 700px;
       margin: 0 auto;
       background-color: $white;
@@ -35,16 +35,10 @@
           margin: 0 auto;
           .form__child--first{
             margin: 0;
-            label{
-              font-size: 14px;
-            }
             @include registration__contain--main();
           }
           .form__child{
             margin: 40px 0 0;
-            label{
-              font-size: 14px;
-            }
             h3{
               font-weight: 600;
             }

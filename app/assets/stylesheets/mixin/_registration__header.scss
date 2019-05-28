@@ -2,7 +2,7 @@
 
 @import "./mixin/_color";
 
-@mixin registration__header(){
+@mixin registration_header(){
   header{
     height: 128px;
     text-align: center;
@@ -17,7 +17,7 @@
         margin: 0 8px 0 0;
       }
     }
-    .registration__bar{
+    .registration_bar{
       display: inline-block;
       padding: 40px 0 0 10px;
       border: 0 ;

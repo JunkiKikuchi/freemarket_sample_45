@@ -3,14 +3,14 @@
 @import "./mixin/next__button";
 @import "./mixin/_color";
 
-.phone__confirmation{
+.phone_confirmation{
   height: 880px;
   background: $background-all;
-  @include registration__header();
+  @include registration_header();
 
-  &--main{
+  .phone_main{
     display: block;
-    &__contents{
+    &_contents{
       width: 700px;
       margin: 0 auto;
       background-color: $white;
@@ -21,7 +21,7 @@
         border-bottom: 1px solid $background-all;
         text-align: center;
       }
-      .form__phone{
+      .form_phone{
         padding: 64px;
         .phone__contents{
           max-width: 320px;
@@ -33,7 +33,7 @@
               display: inline-block;
               color: #333;
             }
-            .phone__input{
+            .phone_input{
               width: 100%;
               margin: 8px 0 0;
               height: 48px;
@@ -52,7 +52,7 @@
             font-size: 13.5px;
           }
           @include next__button();
-          &--text__right{
+          &--text{
             margin: 40px 0 0;
             text-align: right;
             a{

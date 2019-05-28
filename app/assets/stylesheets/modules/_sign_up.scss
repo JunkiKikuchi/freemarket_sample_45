@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./mixin/_sign__up--footer";
+@import "./mixin/_registration__header";
 @import "./mixin/sns_icon";
 @import "./mixin/_color";
 
@@ -15,21 +16,7 @@ html{
     .sign__up--wrapper{
       height: 756px;
       background-color: $background-all;
-      header{
-        width: 100vw;
-        height: 128px;
-        text-align: center;
-        padding-top: 40px;
-        a{
-          margin: 40px auto;
-          .logo{
-            height: 49px;
-            width: 185px;
-            line-height: 49px;
-            display: inline-block;
-          }
-        }
-      }
+      @include registration__header();
       .main{
         height: 400px;
         text-align: center;

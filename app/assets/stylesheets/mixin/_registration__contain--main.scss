@@ -67,10 +67,11 @@
     font-size: 16px;
   }
   .form__child--prefectures{
+    position: relative;
     @include grandchild__select;
     i{
-      right: 300px;
       position: absolute;
+      right:12px;
       top: 45.5%;
       z-index: 2;
       color: #888;

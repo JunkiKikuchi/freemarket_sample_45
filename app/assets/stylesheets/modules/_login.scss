@@ -2,14 +2,15 @@
 @import "./mixin/_sign__up--footer";
 @import "./mixin/sns_icon";
 @import "./mixin/next__button";
+@import "./mixin/_color";
 
 .sign_in--wrapper{
   height: 1150px;
-  background: #f5f5f5;
+  background: $background-all;
   @include registration__header();
   .sign_in--form{
     .login__contents{
-      background: #fff;
+      background: $white;
       margin: 0 auto;
       width:456px;
       &--header{
@@ -22,9 +23,9 @@
         a{
           display: block;
           margin: 8px 0 0;
-          border: 1px solid #0099e8;
-          background: #0099e8;
-          color: #fff;
+          border: 1px solid $text-blue;
+          background: $text-blue;
+          color: $white;
           line-height: 40px;
           text-decoration: none;
         }
@@ -34,7 +35,7 @@
         &--facebook{
           margin: 16px 0 0;
           background-color: #385185;
-          color: #fff;
+          color: $white;
           display: block;
           width: 100%;
           line-height: 48px;
@@ -44,14 +45,14 @@
             @include sns_icon();
             font-size: 30px;
 
-            color: #fff;
+            color: $white;
             background: #385185;
           }
         }
         &--google{
           margin: 16px 0 0;
           background: no-repeat;
-          background-color: #fff;
+          background-color: $white;
           background-image: url('http://image.news.livedoor.com/newsimage/7/c/7cfd3_1223_ddf1a242_1acb6e23-m.jpg') ;
           background-size: 6%;
           background-position:20px;
@@ -74,7 +75,7 @@
             padding: 10px 16px 8px;
             border-radius: 4px;
             border: 1px solid #ccc;
-            background: #fff;
+            background: $white;
             line-height: 1.5;
             font-size: 16px;
           }
@@ -88,7 +89,7 @@
         .password__forget{
           display: block;
           margin: 40px 0 0;
-          color: #0099e8;
+          color: $text-blue;
           text-decoration: none;
           font-size: 14px;
         }

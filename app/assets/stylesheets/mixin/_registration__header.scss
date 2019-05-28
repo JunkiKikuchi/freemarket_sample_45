@@ -1,5 +1,7 @@
 @import "./mixin/_nav__bar_before_after";
 
+@import "./mixin/_color";
+
 @mixin registration__header(){
   header{
     height: 128px;
@@ -31,7 +33,7 @@
         margin-inline-end: 0px;
         padding-inline-start: 40px;
         .l--first{
-          color: #ea352d;
+          color: $background-red;
           font-weight: 600;
         }
         li{
@@ -43,41 +45,41 @@
           position: relative;
           color: #888;
           .nav__bar{
-            background: #ccc;
+            background: $border-gray;
             width: 12px;
             height: 12px;
             margin: 8px auto 0;
             border-radius: 50%;
             &--first{
-              background: #ea352d;
+              background: $background-red;
               &::after{
                 left: 50%;
-                background-color: #ea352d;
+                background-color: $background-red;
                 @include nav__bar_before_after();
               }
             }
 
             &--after::before{
               right: 50%;
-              background: #ccc;
+              background: $border-gray;
               @include nav__bar_before_after();
             }
             &--after::after{
               left: 50%;
-              background: #ccc;
+              background: $border-gray;
               @include nav__bar_before_after();
             }
             &--last::before{
               right: 50%;
-              background: #ccc;
+              background: $border-gray;
               @include nav__bar_before_after();
             }
           }
           .phone__bar{
-            background: #ea352d;
+            background: $background-red;
             &::before{
             right: 50%;
-            background: #ea352d;
+            background: $background-red;
             @include nav__bar_before_after();
             }
           }

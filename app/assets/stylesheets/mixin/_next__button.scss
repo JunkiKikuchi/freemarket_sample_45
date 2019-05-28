@@ -1,8 +1,10 @@
+@import "./mixin/_color";
+
 @mixin next__button(){
   button{
     margin: 40px 0 0;
-    background: #ea352d;
-    border: 1px solid #ea352d;
+    background: $background-red;
+    border: 1px solid $background-red;
     color: #fff;
     display: block;
     width: 100%;

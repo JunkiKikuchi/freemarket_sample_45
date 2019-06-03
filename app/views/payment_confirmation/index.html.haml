@@ -34,9 +34,9 @@
               = image_tag "mastercard_icon.png", class: "card__icon", alt: ""
               = image_tag "saison-card.png", class: "card__icon",
               alt: ""
-              =image_tag "jcb-card_icon.png", class: "card__icon", alt: ""
+              = image_tag "jcb-card_icon.png", class: "card__icon", alt: ""
               = image_tag "american-express_icon", class: "card__icon", alt: ""
-              =image_tag "diners-club-card_icon", class: "card__icon", alt: ""
+              = image_tag "diners-club-card_icon", class: "card__icon", alt: ""
               = image_tag "discover_icon.png", class: "card__icon", alt: ""
           .form__child
             %label  有効期限
@@ -59,7 +59,7 @@
             %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号"}
           .form__child
             %p.text_right
-              %a{href: "#"}
+              = link_to do
                 カード裏面の番号とは？
                 %i.fas.fa-angle-right
           .form__child

@@ -88,13 +88,14 @@
           .form__child
             %p.form__child--next
               「次へ進む」のボタンを押すことにより、
-              %a{href: "#"}利用規約
+              =link_to do
+                利用規約
               に同意したものとみなします
           .form__child
             %button{type: "submit"}次へ進む
           .form__child
             %p.text__right
-              %a{href: "#"}
+              =link_to do
                 本人情報の登録について
                 %i.fas.fa-angle-right
   = render "./sign/sign_up_footer"

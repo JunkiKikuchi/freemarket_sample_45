@@ -1,14 +1,17 @@
 %footer.sign_up_footer
   %ul.sign_up_footer__terms
     %li.l-term
-      %a{href: "#"} プライバシーポリシー
+      = link_to  do
+        プライバシーポリシー
     %li.l-term
-      %a{href: "#"} メルカリ利用規約
+      = link_to  do
+        メルカリ利用規約
     %li.l-term
-      %a{href: "#"} 特定商取引に関する表記
+      = link_to  do
+        特定商取引に関する表記
   .sign_up_footer__logo
-    %a{href: "#"}
-      %img{alt: "", src: "/assets/mercari_logo_vertical.png"}
+    = link_to do
+      = image_tag "/assets/mercari_logo_vertical.png"
   %p
     %small
       © 2019 Mercari

@@ -6,7 +6,7 @@
       .login__contents--header
         %p
           アカウントをお持ちでない方はこちら
-        %a{href: "/users/sign_up"}
+        = link_to "/users/sign_up" do
           新規会員登録
       .login__contents--sns
         %button.login__contents--sns--facebook
@@ -23,7 +23,7 @@
           .g-recaptcha{"data-callback": "clearcall", "data-sitekey": "6LceTaQUAAAAAIYn6HPZE7LjlTJDGdBoH_L94J1R"}
         .form__child
           %button{type: "submit"}ログイン
-        %a.password_forget{href: ""}
+        = link_to class: "password_forget" do
           パスワードをお忘れの方
 
 

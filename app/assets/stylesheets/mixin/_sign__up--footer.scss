@@ -1,0 +1,49 @@
+@mixin sign__up--footer(){
+  .sign_up_footer{
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 220px;
+    margin: 0 auto;
+    padding: 40px 0;
+    &__terms{
+      width: 100vw;
+      .l-term{
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 12px;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    &__logo{
+      height: 65px;
+      width: 80px;
+      margin: 40px auto 0;
+      display: block;
+      a{
+        display: block;
+        color: #333;
+        img{
+          vertical-align: middle;
+          height: 85px;
+          width: 85px;
+          -webkit-filter: grayscale(100%);
+          opacity: 0.3;
+        }
+      }
+    }
+    p{
+      margin: 12px auto;
+      width: 456px;
+      small{
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.registration_wrapper
+  %header
+    = render "./sign/sign_up--header"
+
+    .registration_bar
+      %ol
+        %li.l--first
+          会員情報
+          .nav__bar.nav__bar--first
+        %li
+          電話番号認証
+          .nav__bar.nav__bar--after
+        %li
+          お届け先住所入力
+          .nav__bar.nav__bar--after
+        %li
+          支払い方法
+          .nav__bar.nav__bar--after
+        %li
+          完了
+          .nav__bar.nav__bar--last
+    / /header
+  .registration_main
+    .registration_main__container
+      .container__header
+        %h2 会員情報入力
+      .container__main
+        %form.container__main--form{action: "phones", method: "get"}
+          .form__child--first
+            %label  ニックネーム
+            %span.require  必須
+            %input{type: "text", placeholder: "例）メルカリ太郎"}
+          .form__child
+            %label  メールアドレス
+            %span.require  必須
+            %input{type: "text", placeholder: "PC・携帯どちらでも可"}
+          .form__child
+            %label  パスワード
+            %span.require  必須
+            %input{type: "text", placeholder: "6文字以上"}
+          .form__child
+            %label  パスワード（確認）
+            %span.require  必須
+            %input{type: "text", placeholder: "6文字以上"}
+          .form__child
+            %h3  本人確認
+            %p  安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .form__child
+            %label  性（全角）
+            %span.require  必須
+            %input{type: "text", placeholder: "例）山田"}
+          .form__child
+            %label  名（全角）
+            %span.require  必須
+            %input{type: "text", placeholder: "例）彩"}
+          .form__child
+            %label  性カナ（全角）
+            %span.require  必須
+            %input{type: "text", placeholder: "例）ヤマダ"}
+          .form__child
+            %label  名カナ（全角）
+            %span.require  必須
+            %input{type: "text", placeholder: "例）アヤ"}
+          .form__child
+            %label  生年月日
+            %span.require  必須
+            .form__child--grandchild
+              .form__child--grandchild__birthdays
+                .form__child--grandchild__birthdays__birthday
+                  %select
+                    = render 'devise/registrations/sign_up_year'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  年
+                .form__child--grandchild__birthdays__birthday
+                  %select
+                    = render 'devise/registrations/sign_up_month'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  月
+                .form__child--grandchild__birthdays__birthday
+                  %select
+                    = render 'devise/registrations/sign_up_days'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  日
+          %p.container__main--form__text
+            ※本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          .form__child
+            .g-recaptcha{"data-callback": "clearcall", "data-sitekey": "6LceTaQUAAAAAIYn6HPZE7LjlTJDGdBoH_L94J1R"}
+          .form__child
+            %p.form__child--next
+              「次へ進む」のボタンを押すことにより、
+              =link_to do
+                利用規約
+              に同意したものとみなします
+          .form__child
+            %button{type: "submit"}次へ進む
+          .form__child
+            %p.text__right
+              =link_to do
+                本人情報の登録について
+                %i.fas.fa-angle-right
+  = render "./sign/sign_up_footer"

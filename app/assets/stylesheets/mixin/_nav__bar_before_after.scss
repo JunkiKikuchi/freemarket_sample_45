@@ -1,0 +1,9 @@
+@mixin nav__bar_before_after(){
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+}

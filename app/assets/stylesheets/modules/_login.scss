@@ -1,0 +1,101 @@
+@import "./mixin/registration__header";
+@import "./mixin/_sign__up--footer";
+@import "./mixin/sns_icon";
+@import "./mixin/next__button";
+@import "./mixin/_color";
+
+.sign_in_wrapper{
+  height: 1150px;
+  background: $background-all;
+  @include registration_header();
+  .sign_in_form{
+    .login__contents{
+      background: $white;
+      margin: 0 auto;
+      width:456px;
+      &--header{
+        text-align: center;
+        padding: 40px 64px;
+        border-bottom: 1px solid #eee;
+        p{
+          font-size: 14px;
+        }
+        a{
+          display: block;
+          margin: 8px 0 0;
+          border: 1px solid $text-blue;
+          background: $text-blue;
+          color: $white;
+          line-height: 40px;
+          text-decoration: none;
+        }
+      }
+      &--sns{
+        padding: 32px 64px;
+        &--facebook{
+          margin: 16px 0 0;
+          background-color: #385185;
+          color: $white;
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          position: relative;
+          i{
+            @include sns_icon();
+            font-size: 30px;
+
+            color: $white;
+            background: #385185;
+          }
+        }
+        &--google{
+          margin: 16px 0 0;
+          background: no-repeat;
+          background-color: $white;
+          background-image: url('http://image.news.livedoor.com/newsimage/7/c/7cfd3_1223_ddf1a242_1acb6e23-m.jpg') ;
+          background-size: 6%;
+          background-position:20px;
+          border: #979797 solid 1px;
+          color: #333;
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          position: relative;
+        }
+      }
+      &--mail{
+        padding: 24px 64px 32px;
+        .form__child{
+          input{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: $white;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          .g-recaptcha{
+            margin: 24px 0 0;
+            width: 304px;
+            height: 78px;
+          }
+          @include next__button();
+        }
+        .password_forget{
+          display: block;
+          margin: 40px 0 0;
+          color: $text-blue;
+          text-decoration: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include sign__up--footer();
+}

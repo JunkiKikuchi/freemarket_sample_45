@@ -1,0 +1,91 @@
+@import "./reset";
+@import "./mixin/_sign__up--footer";
+@import "./mixin/_registration__contain--main";
+@import "./mixin/_nav__bar_before_after";
+@import "./mixin/_registration__header";
+@import "./mixin/next__button";
+@import "./mixin/_color";
+
+.registration_wrapper{
+  height: 2104px;
+  box-sizing: border-box;
+  background-color: $background-all;
+  @include registration_header();
+
+  .registration_main{
+    display: block;
+    &__container{
+      width: 700px;
+      margin: 0 auto;
+      background-color: $white;
+      .container__header{
+        h2{
+          padding: 32px 16px;
+          font-size: 22px;
+          text-align: center;
+          line-height:1.5;
+          font-weight: 600;
+        }
+      }
+      .container__main{
+        padding: 40px 16px;
+        border-top: 1px solid $background-all;
+        .container__main--form{
+          max-width: 320px;
+          margin: 0 auto;
+          .form__child--first{
+            margin: 0;
+            @include registration__contain--main();
+          }
+          .form__child{
+            margin: 40px 0 0;
+            h3{
+              font-weight: 600;
+            }
+            @include registration__contain--main();
+            .google__recaptcha{
+              width: 304px;
+              height: 78px;
+            }
+            &--next{
+              text-align: center;
+              a{
+                color: #0099e8;
+                text-decoration: none;
+              }
+            }
+            @include next__button();
+            .text__right{
+              text-align: right;
+              padding: 0;
+              a{
+                color: $text-blue;
+                text-decoration: none;
+                i{
+                  display: inline-block;
+                  font-size: 20px;
+                  font-family: "Font Awesome 5 Free";
+                  content: "\f105";
+                  speak: none;
+                  font-style: normal;
+                  font-weight: 900;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                }
+              }
+            }
+          }
+          &__text{
+            margin: 8px 0 0;
+            line-height: 1.5;
+            color: #888;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @include sign__up--footer();
+}

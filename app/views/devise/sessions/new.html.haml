@@ -1,0 +1,31 @@
+.sign_in_wrapper
+  %header
+    = render "./sign/sign_up--header"
+  .sign_in_form
+    .login__contents
+      .login__contents--header
+        %p
+          アカウントをお持ちでない方はこちら
+        = link_to "/users/sign_up" do
+          新規会員登録
+      .login__contents--sns
+        %button.login__contents--sns--facebook
+          %i.fab.fa-facebook-square
+          Facebookでログイン
+        %button.login__contents--sns--google
+          Googleでログイン
+      %form.login__contents--mail{action: "", alt: ""}
+        .form__child
+          %input{type: "text", placeholder: "メールアドレス"}
+        .form__child
+          %input{type: "text", placeholder: "パスワード"}
+        .form__child
+          .g-recaptcha{"data-callback": "clearcall", "data-sitekey": "6LceTaQUAAAAAIYn6HPZE7LjlTJDGdBoH_L94J1R"}
+        .form__child
+          %button{type: "submit"}ログイン
+        = link_to class: "password_forget" do
+          パスワードをお忘れの方
+
+
+  = render "./sign/sign_up_footer"
+

@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'products#index'
-  get products: :"products#index"
-  get registrations: :'registrations#index'
-  get phones: :'phones#index'
-  get address: :'address_confirmation#index'
-  get payment: :'payment_confirmation#index'
-  get registration_finish: :'registration_finish#index'
+  get 'registrations' ,to: 'registrations#index'
+  get 'phones' ,to: 'phones#index'
+  get 'address' ,to: 'address_confirmation#index'
+  get 'payment' ,to: 'payment_confirmation#index'
+  get 'registration_finish' ,to: 'registration_finish#index'
 end

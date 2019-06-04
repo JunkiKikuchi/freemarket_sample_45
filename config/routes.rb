@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   root 'products#index'
 
-  get 'card_add' ,to: 'card_add#index'
+  resources :card_add do
+    resources :crejit_confirmation
+  end
+
   get 'registrations' ,to: 'registrations#index'
   get 'phones' ,to: 'phones#index'
   get 'address' ,to: 'address_confirmation#index'

@@ -1,0 +1,48 @@
+@import "./mixin/_sign__up--footer";
+@import "./mixin/registration__header";
+@import "./mixin/_registration__contain--main";
+@import "./mixin/next__button";
+@import "./mixin/color";
+
+.registration_finish{
+  background: $background-all;
+  height: 800px;
+  @include registration_header();
+  .finish_main{
+    display: block;
+    margin-bottom: 40px;
+    &__container{
+      width: 700px;
+      margin: 0 auto;
+      background-color: $white;
+      &--header{
+        h2{
+          padding: 32px 16px;
+          font-size: 22px;
+          text-align: center;
+          line-height:1.5;
+          font-weight: 600;
+        }
+      }
+      &--main{
+        padding: 40px 16px;
+        border-top: 1px solid $background-all;
+        .finish_form{
+          max-width: 320px;
+          margin: 0 auto;
+          .form__child{
+            margin: 40px 0 0;
+            @include registration__contain--main();
+            .main_text{
+              text-align: center;
+              font-size: 18px;
+            }
+            @include next__button();
+          }
+        }
+      }
+    }
+  }
+
+  @include sign__up--footer();
+}

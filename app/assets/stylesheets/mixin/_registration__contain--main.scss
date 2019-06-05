@@ -1,0 +1,121 @@
+@import "./mixin/_color";
+
+
+@mixin grandchild__select(){
+  select{
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid $border-gray;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+  }
+}
+
+@mixin icon(){
+  i{
+    right: 12px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 25px;
+    transform: translate(0, -50%);
+    display: inline-block;
+  }
+}
+
+@mixin registration__contain--main(){
+  label{
+    font-weight: 550;
+    display: inline-block;
+    font-size: 14px;
+  }
+  .require{
+    background: $background-red;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .not-require{
+    background: gray;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  input{
+    width: 100%;
+    margin: 8px 0 0;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid $border-gray;
+    background: $white;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .form__child--prefectures{
+    position: relative;
+    @include grandchild__select;
+    i{
+      position: absolute;
+      right:12px;
+      top: 45.5%;
+      z-index: 2;
+      color: #888;
+      font-size: 25px;
+      transform: translate(0, -50%);
+      display: inline-block;
+    }
+  }
+
+  h3{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+    margin: 8px 0 0;
+  }
+  .form__child--grandchild{
+    &__birthdays{
+      &__birthday{
+        display: inline-block;
+        width: 76px;
+        margin: 8px 0;
+        position: relative;
+        span{
+          margin: 0 2px;
+        }
+        @include icon;
+        @include grandchild__select;
+      }
+    }
+    &__limits{
+      &__limit{
+        display: inline-block;
+        width: 76px;
+        margin: 8px 0;
+        position: relative;
+        span{
+          margin: 0 2px;
+        }
+        @include icon;
+        @include grandchild__select;
+      }
+    }
+  }
+}
+

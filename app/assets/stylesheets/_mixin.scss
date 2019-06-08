@@ -1,13 +1,11 @@
 @mixin notfound{
-  background: $white;
-  height: 236px;
   color: #ccc;
-  p{
-    height: 16px;
-    padding-top: 160px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 16px;
-    text-align: center;
-  }
+  padding: 160px 0 60px;
+  background-image: url(//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?72826626);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  background-size: 120px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
 }

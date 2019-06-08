@@ -1,0 +1,351 @@
+.l-content-mypage{
+  width: 700px;
+}
+section.mypage-user-icon{
+  height: 200px;
+  font-size: 14px;
+  padding: 20px;
+  background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?40116333);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  img {
+    border-radius: 50%;
+    margin-top: 10px;
+    &:hover {
+      text-decoration: underline;
+      color: $black;
+      opacity: 0.5;
+    }
+  }
+}
+.mypage-number {
+  display: flex;
+  color: $black;
+  margin-top: 8px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  span{
+    font-weight: bold;
+    margin-left: 8px;
+    .span-space{
+      margin-left: 16px;
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+.mypage-tab-container-notification-todo {
+  background-color: #fff;
+  margin-bottom: 50px;
+
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 74px;
+  border-top: 2px solid $light-gray;
+  background-color: $light-gray;
+  line-height: 74px;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  float: left;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+   &:hover {
+   opacity: 0.75;
+   }
+  }
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  clear: both;
+  overflow: hidden;
+  ul{
+    li{
+      padding: 16px;
+      border-bottom: 1px solid $light-gray;
+      &:hover{
+        background-color: #f9f9f9;
+      }
+      .mypage-item-body{
+        
+        display: flex;
+        figure{
+          margin: 0;
+          width: 48px;
+          height: 48px;
+        }
+        .mypage-item-text{
+          width: 560px;
+          margin-right: 40px;
+          margin-left: 38px;
+        }
+        .time{
+          color: #888;
+          line-height: 17px;
+        }
+        .fa-angle-right{
+          float: right;
+          color: $black;
+          line-height: 48px;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+.mypage-go-list {
+  padding: 16px;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 56px;
+  &__link {
+    width: 668px;
+    height: 56px;
+    background-color: $light-gray;
+  }
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#news:checked ~ #news_content,
+#to-do:checked ~ #to-do_content{
+  display: block;
+}
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #fff;
+  color: $black;
+  border-top: 2px solid #ea352d;
+}
+.notfound-todo{
+      @include notfound();
+    }
+
+%section.mypage-tab-container {
+  margin-bottom: 500px;
+}
+.mypge-tab-container-notification-tread{
+  margin-top: 40px;
+  .mypage-tab-head{
+    h2{
+        background: #fafafa;
+        font-size: 16px;
+        line-height: 72px;
+        font-weight: bold;
+        padding: 0 16px;
+    }
+   }
+  }
+  .t-tabs {
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 0 auto;}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .mypage-tab-container-notification-todo {
+//   margin: 0;
+// }
+// .mypage-tabs {
+//   background-color: $light-gray;
+//   display: block;
+//   color: $black;
+//   font-size: 16px;
+//   height: 74px;
+// }
+
+// .mypage-tab-head{
+//   background-color: #fafafa;
+//   padding: 0 16px;
+// }
+
+// .tab_item-news {
+//   width: calc(100%/2);
+//   height: 74px;
+//   border-top: 2px solid #ea352d;
+//   background: $white;
+//   line-height: 74px;
+//   text-align: center;
+//   display: block;
+//   float: left;
+//   text-align: center;
+//   font-weight: bold;
+// }
+
+// .tab_item-todo {
+//   width: calc(100%/2);
+//   height: 74px;
+//   border-top: 2px solid $light-gray;
+//   background-color: $light-gray;
+//   line-height: 74px;
+//   text-align: center;
+//   display: block;
+//   float: left;
+//   text-align: center;
+//   font-weight: bold;
+// }
+
+// .tab_content{
+//   background: $white;
+//   ul{
+//     li{
+//       padding: 16px;
+//       border-bottom: 1px solid $light-gray;
+//       &:hover{
+//         background-color: #f9f9f9;
+//       }
+//       .mypage-item-body{
+//         display: flex;
+//         figure{
+//           margin: 0;
+//           width: 48px;
+//           height: 48px;
+//         }
+//         .mypage-item-text{
+//           width: 560px;
+//           height: 60px;
+//           margin-right: 40px;
+//           margin-left: 38px;
+//         }
+//         .time{
+//           color: #888;
+//           line-height: 17px;
+//         }
+//         .fa-angle-right{
+//           float: right;
+//           color: $black;
+//           line-height: 48px;
+//           font-size: 26px;
+//         }
+//       }
+//     }
+//   }
+//   .mypage-go-list {
+//     padding: 16px;
+//     list-style: none;
+//     margin: 0 auto;
+//     text-align: center;
+//     line-height: 56px;
+//     &__link {
+//       width: 668px;
+//       height: 56px;
+//       background-color: $light-gray;
+//     }
+//   }
+//   .notfound-todo{
+//     @include notfound();
+//   }
+// }
+
+// .mypge-tab-container-notification-tread{
+//    margin-top: 40px;
+//     .mypage-tab-head{
+//        padding: 0 16px;
+//         h2{
+//             background: #fafafa;
+//             font-size: 16px;
+//             line-height: 72px;
+//             font-weight: bold;
+//         }
+//       }
+//       .mypage-tabs{
+//         .tab_item-now {
+//           width: calc(100%/2);
+//           height: 74px;
+//           border-top: 2px solid #ea352d;
+//           background: $white;
+//           line-height: 74px;
+//           text-align: center;
+//           display: block;
+//           float: left;
+//           text-align: center;
+//           font-weight: bold;
+//         }
+        
+//         .tab_item-old {
+//           width: calc(100%/2);
+//           height: 74px;
+//           border-top: 2px solid $light-gray;
+//           background-color: $light-gray;
+//           line-height: 74px;
+//           text-align: center;
+//           display: block;
+//           float: left;
+//           text-align: center;
+//           font-weight: bold;
+//         }
+//       }
+//       .tab_content{                 //資料が見つからなかった為仮配置。見つけ次第変更予定
+//         background: $white;
+//         ul{
+//           li{
+//             padding: 16px;
+//             border-bottom: 1px solid $light-gray;
+//             .mypage-item-body{
+//               display: flex;
+//             figure{
+//               margin: 0;
+//               width: 48px;
+//               height: 48px;  
+//             }
+//             .mypage-item-name{
+//               width: 560px;
+//               height: 60px;
+//               margin-right: 40px;
+//               margin-left: 38px;
+//               line-height: 60px;
+//               font-size: 18px;
+//             }
+//             .fa-angle-right{
+//               float: right;
+//               color: #333;
+//               line-height: 48px;
+//               font-size: 26px;
+//               }
+//             }
+//           }
+//         }
+//         }
+//         .notfound-now,.notfound-old{
+//           @include notfound();
+//         }
+
+// }

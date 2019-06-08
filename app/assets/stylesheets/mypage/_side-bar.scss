@@ -9,7 +9,7 @@
         position: relative;
         min-height: 48px;
         background: $white;
-        color: $text-color;
+        color: $black;
         margin: 0;
         line-height: 50px;
         text-decoration: none;
@@ -43,6 +43,6 @@
   font-weight: 600;
   i{
     font-weight: 600;
-    color: #333;
+    color:$black;
   }
 }

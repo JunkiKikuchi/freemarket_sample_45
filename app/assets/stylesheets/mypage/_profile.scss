@@ -1,199 +1,63 @@
-.l-content-mypage{
+.l-chapter-container{
   width: 700px;
-}
-.mypage-user-icon{
-  height: 200px;
-  font-size: 14px;
-  padding: 20px;
-  background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?40116333);
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  img {
-    border-radius: 50%;
-    margin-top: 10px;
-  }
-}
-
-.mypage-number {
-  display: flex;
-  color: $text-color;
-  margin-top: 8px;
-  font-size: 14px;
-  display: inline-block;
-  text-align: center;
-  span{
-    font-weight: bold;
-    margin-left: 8px;
-    .span-space{
-      margin-left: 16px;
-    }
-  }
-}
-
-.mypage-tab-container-notification-todo {
+  height: 568px;
+  background: $white;
   margin: 0;
-}
-.mypage-tabs {
-  background-color: $light-gray;
-  display: block;
-  color: $text-color;
-  font-size: 16px;
-  height: 74px;
-}
-
-.mypage-tab-head{
-  background-color: #fafafa;
-  padding: 0 16px;
-}
-
-.tab_item-news {
-  width: calc(100%/2);
-  height: 74px;
-  border-top: 2px solid #ea352d;
-  background: $white;
-  line-height: 74px;
-  text-align: center;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-}
-
-.tab_item-todo {
-  width: calc(100%/2);
-  height: 74px;
-  border-top: 2px solid $light-gray;
-  background-color: $light-gray;
-  line-height: 74px;
-  text-align: center;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-}
-
-.tab_content{
-  background: $white;
-  ul{
-    li{
-      padding: 16px;
-      border-bottom: 1px solid $light-gray;
-      .mypage-item-body{
-        display: flex;
-        figure{
-          margin: 0;
-          width: 48px;
-          height: 48px;
-        }
-        .mypage-item-text{
-          width: 560px;
-          height: 60px;
-          margin-right: 40px;
-          margin-left: 38px;
-        }
-        .time{
-          color: #888;
-          line-height: 17px;
-        }
-        i{
-          float: right;
-          color: #333;
-          line-height: 48px;
-          font-size: 26px;
-        }
-      }
-    }
-  }
-  .mypage-go-list {
-    padding: 16px;
-    list-style: none;
-    margin: 0 auto;
+  padding: 0;
+  &__head{
+    font-size: 24px;
+    padding: 8px 24px;
+    border-bottom: 1px solid #f5f5f5;
     text-align: center;
-    line-height: 56px;
-    &__link {
-      width: 668px;
-      height: 56px;
-      background-color: $light-gray;
+    font-weight: bold;
+  }
+  &__icon{
+    height: 60px;
+     padding: 72px 16px 24px;
+     background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?40116333);
+     background-repeat: no-repeat;
+     background-size: cover;
+     text-align: center;
+     font-size: 0;
+     figure{
+      height: 60px;
+      width: 60px;
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+     }
+     img {
+      border-radius: 50%;
+      margin-top: 10px;
+      vertical-align: middle;
     }
   }
-  .notfound-todo{
-    @include notfound();
+  &__comment{
+    padding: 40px 16px;
   }
 }
 
-.mypge-tab-container-notification-tread{
-   margin-top: 40px;
-    .mypage-tab-head{
-       padding: 0 16px;
-        h2{
-            background: #fafafa;
-            font-size: 16px;
-            line-height: 72px;
-            font-weight: bold;
-        }
-      }
-      .mypage-tabs{
-        .tab_item-now {
-          width: calc(100%/2);
-          height: 74px;
-          border-top: 2px solid #ea352d;
-          background: $white;
-          line-height: 74px;
-          text-align: center;
-          display: block;
-          float: left;
-          text-align: center;
-          font-weight: bold;
-        }
-        
-        .tab_item-old {
-          width: calc(100%/2);
-          height: 74px;
-          border-top: 2px solid $light-gray;
-          background-color: $light-gray;
-          line-height: 74px;
-          text-align: center;
-          display: block;
-          float: left;
-          text-align: center;
-          font-weight: bold;
-        }
-      }
-      .tab_content{                 //資料が見つからなかった為仮配置。見つけ次第変更予定
-        background: $white;
-        ul{
-          li{
-            padding: 16px;
-            border-bottom: 1px solid $light-gray;
-            .mypage-item-body{
-              display: flex;
-            figure{
-              margin: 0;
-              width: 48px;
-              height: 48px;  
-            }
-            .mypage-item-name{
-              width: 560px;
-              height: 60px;
-              margin-right: 40px;
-              margin-left: 38px;
-              line-height: 60px;
-              font-size: 18px;
-            }
-            i{
-              float: right;
-              color: #333;
-              line-height: 48px;
-              font-size: 26px;
-              line-height: 60px;
-              }
-            }
-          }
-        }
-        }
-        .notfound-now,.notfound-old{
-          @include notfound();
-        }
+.input-default{
+  height: 28px;
+  width: 186px;
+}
 
+.textarea-default{
+    height: 194px;
+    display: block;
+    width: 649px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.btn-red{
+  margin-top: 16px;
+  height: 48px;
+  width: 100%;
+  color: $white;
+  background: #ea352d;
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
 }

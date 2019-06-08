@@ -92,84 +92,97 @@
         %span 0
         出品数
         %span 0
+
     %section.mypage-tab-container-notification-todo
-      .mypage-tabs
-        %label.tab_item-news お知らせ
-        %label.tab_item-todo やることリスト
-      .tab_content
-        %ul
-          %li
-            .mypage-item-body
-              %figure
-                =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
-              .mypage-item-text
-                「メルペイあと払い」リリースのお知らせ
-                .time
-                  %span １日前
-              %i.fa.fa-angle-right
-
-          %li
-            .mypage-item-body
-              %figure
-                =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
-              .mypage-item-text
-                【出品はじめかたガイド】安心でかんたんに出品する方法をCHECKしてみよう！
-                .time
-                  %span ３日前
-              %i.fa.fa-angle-right
-
-          %li
-            .mypage-item-body
-              %figure
-                =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
-              .mypage-item-text
-                【メルカリ安心への取り組み】商品代金は、取引完了まで事務局が大切にお預かりいたします
-                .time
-                  %span １０日前
-              %i.fa.fa-angle-right
-            
-          %li.mypage-go-list
-            .mypage-go-list__link
-              一覧を見る
-
-          -# .notfound-todo             メルカリアイコン画像リンクが不明
-          -#   %p.not-found__text
-          -#     現在、やることリストはありません
-
-
-         
-
-      %section.mypge-tab-container-notification-tread
-        .mypage-tab-head
-          %h2 購入した商品
-        .mypage-tabs
-          %label.tab_item-now 取引中
-          %label.tab_item-old 過去の取引
-        .tab_content
+      .tabs
+        %input#news{:checked => "checked", :name => "tab_item", :type => "radio"}/
+        %label.tab_item{:for => "news"} お知らせ
+        %input#to-do{:name => "tab_item", :type => "radio"}/
+        %label.tab_item{:for => "to-do"} やることリスト
+        #news_content.tab_content
           %ul
             %li
               .mypage-item-body
                 %figure
-                  =image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZTCEwUcFywO36lQdGTtzrHvzOBQcQQ9_fxgC-teNLHfUK7LaGFA", width: "48")
-                .mypage-item-name
-                  オシャレバッグ
+                  =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
+                .mypage-item-text
+                  「メルペイあと払い」リリースのお知らせ
+                  .time
+                    %span １日前
                 %i.fa.fa-angle-right
+            %li
+              .mypage-item-body
+                %figure
+                  =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
+                .mypage-item-text
+                  【出品はじめかたガイド】安心でかんたんに出品する方法をCHECKしてみよう！
+                  .time
+                    %span ３日前
+                %i.fa.fa-angle-right
+            %li
+              .mypage-item-body
+                %figure
+                  =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
+                .mypage-item-text
+                  【あと2日】ファッションアイテムが売れたら“必ず“ポイントがもらえるキャンペーン開催中
+                  .time
+                    %span １７日前
+                %i.fa.fa-angle-right
+            %li
+              .mypage-item-body
+                %figure
+                  =image_tag("https://static.mercdn.net/images/mercari_profile.png", width: "48")
+                .mypage-item-text
+                  【メルカリ安心への取り組み】商品代金は、取引完了まで事務局が大切にお預かりいたします
+                  .time
+                    %span １０日前
+                %i.fa.fa-angle-right
+            .mypage-go-list
+              .mypage-go-list__link
+                一覧を見る
 
-            %li
-              .mypage-item-body
-                %figure
-                  =image_tag("https://www.iikigokochi.jp/contents/shop/00000006/shop/image/kigokochi/feature25/sec02-item01-pic01.jpg", width: "48")
-                .mypage-item-name
-                  【天然素材】着心地の良い服
-                %i.fa.fa-angle-right
+        #to-do_content.tab_content
+          .tab_content_description
+            .notfound-todo
+              %p.not-found__text
+                現在、やることリストはありません
+
+
+
+    %section.mypge-tab-container-notification-tread
+      .mypage-tab-head
+        %h2 購入した商品
+
+    .t-tabs
+      %input#now{:checked => "checked", :name => "t-tab_item", :type => "radio"}/
+      %label.t-tab_item{:for => "now"} 取引中
+      %input#old{:name => "t-tab_item", :type => "radio"}/
+      %label.t-tab_item{:for => "old"} 過去の取引
+      #now_content.tab_content
+      -#     %ul
+      -#       %li
+      -#         .mypage-item-body
+      -#           %figure
+      -#             =image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZTCEwUcFywO36lQdGTtzrHvzOBQcQQ9_fxgC-teNLHfUK7LaGFA", width: "48")
+      -#           .mypage-item-name
+      -#             オシャレバッグ
+      -#           %i.fa.fa-angle-right
+
+      -#       %li
+      -#         .mypage-item-body
+      -#           %figure
+      -#             =image_tag("https://www.iikigokochi.jp/contents/shop/00000006/shop/image/kigokochi/feature25/sec02-item01-pic01.jpg", width: "48")
+      -#           .mypage-item-name
+      -#             【天然素材】着心地の良い服
+      -#           %i.fa.fa-angle-right
             
-            %li
-              .mypage-item-body
-                %figure
-                  =image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnSxc40f9xRf7QLwzv5xYWh2KyBpa26orhobbbU6dYqJRRTGnoJA", width: "48")
-                .mypage-item-name
-                  ふかふかソファー
-                %i.fa.fa-angle-right
+      -#       %li
+      -#         .mypage-item-body
+      -#           %figure
+      -#             =image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnSxc40f9xRf7QLwzv5xYWh2KyBpa26orhobbbU6dYqJRRTGnoJA", width: "48")
+      -#           .mypage-item-name
+      -#             ふかふかソファー
+      -#           %i.fa.fa-angle-right
 
             -# .notfound-now             メルカリアイコン画像リンクが不明
           -#   %p.not-found__text
@@ -180,19 +193,3 @@
           -#   %p.not-found__text
             -#   %p.not-found__text
             -#     過去に取引した商品がありません
-
-.app-banner
-  .app-banner__pc
-    .app-banner__pc__inner
-      %h2 スマホでかんたんフリマアプリ
-      %p 今すぐ無料ダウンロード！
-      .app-banner__pc__inner__icon
-        %figure
-          =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?4136293187", width: "68")
-        %ul.flex
-          %li
-            =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?4136293187", height: "40", width: "133")
-          %li
-            =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?4136293187", height: "40", width: "133")
-    %figure.right-phone
-      =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?4136293187")

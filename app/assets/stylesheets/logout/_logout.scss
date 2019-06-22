@@ -1,0 +1,89 @@
+body{
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.l-container{
+  margin: 40px auto 40px;
+  width: 1020px;
+  display: flex;
+  .l-side{
+    width: 280px;
+    margin: 0 40px 0 0;
+    &__mypage-nav{
+      &__list{
+        list-style: none;
+        &__item{
+          display: block;
+          position: relative;
+          min-height: 48px;
+          background: #fff;
+          color: #333;
+          margin: 0;
+          line-height: 50px;
+          text-decoration: none;
+          li{
+            padding-left: 16px;
+            border-top: 1px solid #eee;
+            &:hover{
+              background-color: #f9f9f9;
+            }
+          }
+          i{
+            padding-right: 16px;
+            float: right;
+            color: #ccc;
+            line-height: 48px;
+            font-size: 26px;
+          }
+        }
+      }
+      &__head{
+        margin: 40px 0 0;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 5px;
+
+      }
+    }
+  }
+  .nowhere{
+    background-color: #eee;
+    font-weight: 600;
+    i{
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+.l--logout{
+  margin: 0;
+  float: right;
+  width: 700px;
+  background: #fff;
+  height: 179px;
+  .logout__form{
+    padding: 64px;
+    .logout__form--main{
+      max-width: 320px;
+      margin: 0 auto;
+      button{
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        min-height: 1.5em;
+      }
+    }
+  }
+}

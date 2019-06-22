@@ -1,6 +1,6 @@
 @import "./mixin/_nav__bar_before_after";
 
-@import "./mixin/_color";
+@import "./config/color";
 
 @mixin registration_header(){
   header{

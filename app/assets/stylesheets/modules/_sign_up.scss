@@ -1,8 +1,7 @@
-@import "./reset";
 @import "./mixin/_sign__up--footer";
 @import "./mixin/_registration__header";
 @import "./mixin/sns_icon";
-@import "./mixin/_color";
+@import "./config/color";
 
 *{
   box-sizing: border-box;

@@ -2,7 +2,7 @@
 @import "./mixin/registration__header";
 @import "./mixin/_registration__contain--main";
 @import "./mixin/next__button";
-@import "./mixin/color";
+@import "./config/color";
 
 .registration_finish{
   background: $background-all;

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :card_add do
     resources :crejit_confirmation
   end
-
+  get 'logout' ,to: 'logout#index'
   get 'registrations' ,to: 'registrations#index'
   get 'phones' ,to: 'phones#index'
   get 'address' ,to: 'address_confirmation#index'

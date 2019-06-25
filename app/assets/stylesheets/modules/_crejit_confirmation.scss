@@ -1,0 +1,75 @@
+@import "./mixin/_registration__contain--main";
+@import "./mixin/next__button";
+
+.payment_confirmation_main{
+  float: right;
+  display: block;
+  margin-bottom: 40px;
+  .payment__container{
+    width: 700px;
+    margin: 0 auto;
+    background-color: $white;
+    &--header{
+      h2{
+        font-size: 25px;
+        text-align: center;
+        line-height:1.5;
+        font-weight: 600;
+      }
+    }
+    &--main{
+      padding: 40px 16px;
+      border-top: 1px solid $background-all;
+      .payment_form{
+        max-width: 320px;
+        margin: 0 auto;
+        .form__child--first{
+          margin: 0;
+          label{
+            font-size: 14px;
+          }
+          .card__icons{
+            margin-top: 5px;
+            height: 40px;
+            .card__icon{
+              width: 40px;
+              display: inline-block;
+            }
+          }
+          @include registration__contain--main();
+        }
+        .form__child{
+          margin: 40px 0 0;
+          label{
+            font-size: 14px;
+          }
+          h3{
+            font-weight: 600;
+          }
+          @include registration__contain--main();
+          @include next__button();
+          .text_right{
+            text-align: right;
+            padding: 0;
+            span{
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              background: #0099e8;
+              color: #fff;
+              line-height: 14px;
+              font-size: 12px;
+              text-align: center;
+            }
+            a{
+              color: $text-blue;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

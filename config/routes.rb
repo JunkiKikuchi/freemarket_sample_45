@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'products#index'
+
+  resources :card_add do
+    resources :crejit_confirmation
+  end
   get 'logout' ,to: 'logout#index'
   get 'registrations' ,to: 'registrations#index'
   get 'phones' ,to: 'phones#index'

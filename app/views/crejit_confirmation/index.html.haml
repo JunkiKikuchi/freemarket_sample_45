@@ -1,0 +1,125 @@
+.default-countainer
+  .header
+
+
+%main.l-container
+  .l-side
+    %nav.l-side__mypage-nav
+      %ul.l-side__mypage-nav__list__item
+        %li.nowhere
+          マイページ
+          %i.fa.fa-angle-right
+        %li
+          お知らせ
+          %i.fa.fa-angle-right
+        %li
+          やることリスト
+          %i.fa.fa-angle-right
+        %li
+          いいね！一覧
+          %i.fa.fa-angle-right
+        %li
+          出品する
+          %i.fa.fa-angle-right
+        %li
+          出品した商品 - 出品中
+          %i.fa.fa-angle-right
+        %li
+          出品した商品 - 取引中
+          %i.fa.fa-angle-right
+        %li
+          出品した商品 - 売却済み
+          %i.fa.fa-angle-right
+        %li
+          購入した商品 - 取引中
+          %i.fa.fa-angle-right
+        %li
+          購入した商品 - 過去の取引
+          %i.fa.fa-angle-right
+        %li
+          ニュース一覧
+          %i.fa.fa-angle-right
+        %li
+          評価一覧
+          %i.fa.fa-angle-right
+        %li
+          ガイド
+          %i.fa.fa-angle-right
+        %li
+          お問い合わせ
+          %i.fa.fa-angle-right
+      %h3.l-side__mypage-nav__head メルペイ
+      %ul.l-side__mypage-nav__list__item
+        %li
+          売上・振込申請
+          %i.fa.fa-angle-right
+        %li
+          ポイント
+          %i.fa.fa-angle-right
+      %h3.l-side__mypage-nav__head 設定
+      %ul.l-side__mypage-nav__list__item
+        %li
+          プロフィール
+          %i.fa.fa-angle-right
+        %li
+          住所変更
+          %i.fa.fa-angle-right
+        %li
+          支払い方法
+          %i.fa.fa-angle-right
+        %li
+          メール/パスワード
+          %i.fa.fa-angle-right
+        %li
+          本人情報
+          %i.fa.fa-angle-right
+        %li
+          電話番号の確認
+          %i.fa.fa-angle-right
+        %li
+          ログアウト
+          %i.fa.fa-angle-right
+  .payment_confirmation_main
+    .payment__container
+      .payment__container--header
+        %h2 クレジットカード情報入力
+      .payment__container--main
+        %form.payment_form{action: "", method: ""}
+          .form__child--first
+            %label  カード
+            %span.require  必須
+            %input{type: "text", placeholder: "半角数字のみ"}
+            .card__icons
+              = image_tag "visa_icon.png", class: "card__icon", alt: ""
+              = image_tag "mastercard_icon.png", class: "card__icon", alt: ""
+              = image_tag "saison-card.png", class: "card__icon",
+              alt: ""
+              = image_tag "jcb-card_icon.png", class: "card__icon", alt: ""
+              = image_tag "american-express_icon", class: "card__icon", alt: ""
+              = image_tag "diners-club-card_icon", class: "card__icon", alt: ""
+              = image_tag "discover_icon.png", class: "card__icon", alt: ""
+          .form__child
+            %label  有効期限
+            %span.require  必須
+            .form__child--grandchild
+              .form__child--grandchild__limits
+                .form__child--grandchild__limits__limit
+                  %select
+                    = render './payment_confirmation/payment_limit_month'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  月
+                .form__child--grandchild__limits__limit
+                  %select
+                    = render './payment_confirmation/payment_limit_year'
+                  %i.fas.fa-angle-down
+                %span.form__grandchild  年
+          .form__child
+            %label  セキュリティコード
+            %span.require  必須
+            %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号"}
+            %p.text_right
+              = link_to do
+                %span ？
+                カード裏面の番号とは？
+          .form__child
+            %button{type: "submit"}追加する
